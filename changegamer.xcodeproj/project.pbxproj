@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3942A0495F0FB64528FE1CDA /* Pods_changegamer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A38D562B0210FAAB734BC110 /* Pods_changegamer.framework */; };
 		8E3D24A51DB1FAC900B2D8FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D24A41DB1FAC900B2D8FF /* AppDelegate.swift */; };
 		8E3D24A71DB1FAC900B2D8FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D24A61DB1FAC900B2D8FF /* ViewController.swift */; };
 		8E3D24AA1DB1FAC900B2D8FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E3D24A81DB1FAC900B2D8FF /* Main.storyboard */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0FFFC6CE4478B9AB2A5372FF /* Pods-changegamer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-changegamer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-changegamer/Pods-changegamer.debug.xcconfig"; sourceTree = "<group>"; };
+		420545F0F89043BB460FE6FC /* Pods-changegamer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-changegamer.release.xcconfig"; path = "Pods/Target Support Files/Pods-changegamer/Pods-changegamer.release.xcconfig"; sourceTree = "<group>"; };
 		8E3D24A11DB1FAC900B2D8FF /* changegamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = changegamer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E3D24A41DB1FAC900B2D8FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E3D24A61DB1FAC900B2D8FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		8E3D24C01DB1FAC900B2D8FF /* changegamerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = changegamerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E3D24C41DB1FAC900B2D8FF /* changegamerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = changegamerUITests.swift; sourceTree = "<group>"; };
 		8E3D24C61DB1FAC900B2D8FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A38D562B0210FAAB734BC110 /* Pods_changegamer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_changegamer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3942A0495F0FB64528FE1CDA /* Pods_changegamer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4BD364BED22289DDF18FEC37 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0FFFC6CE4478B9AB2A5372FF /* Pods-changegamer.debug.xcconfig */,
+				420545F0F89043BB460FE6FC /* Pods-changegamer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8E3D24981DB1FAC800B2D8FF = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +95,8 @@
 				8E3D24B81DB1FAC900B2D8FF /* changegamerTests */,
 				8E3D24C31DB1FAC900B2D8FF /* changegamerUITests */,
 				8E3D24A21DB1FAC900B2D8FF /* Products */,
+				4BD364BED22289DDF18FEC37 /* Pods */,
+				9F1F52922690E96D5DD4F5AE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +141,14 @@
 			path = changegamerUITests;
 			sourceTree = "<group>";
 		};
+		9F1F52922690E96D5DD4F5AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A38D562B0210FAAB734BC110 /* Pods_changegamer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E3D24C91DB1FAC900B2D8FF /* Build configuration list for PBXNativeTarget "changegamer" */;
 			buildPhases = (
+				13FD8CBF502A2FD1F9D221EC /* [CP] Check Pods Manifest.lock */,
 				8E3D249D1DB1FAC800B2D8FF /* Sources */,
 				8E3D249E1DB1FAC800B2D8FF /* Frameworks */,
 				8E3D249F1DB1FAC800B2D8FF /* Resources */,
+				64200A56BF8841C0FBEC5B4B /* [CP] Embed Pods Frameworks */,
+				785D56032DA6570D5B7A5FFD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,6 +281,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		13FD8CBF502A2FD1F9D221EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		64200A56BF8841C0FBEC5B4B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-changegamer/Pods-changegamer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		785D56032DA6570D5B7A5FFD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-changegamer/Pods-changegamer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8E3D249D1DB1FAC800B2D8FF /* Sources */ = {
@@ -411,10 +486,12 @@
 		};
 		8E3D24CA1DB1FAC900B2D8FF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FFFC6CE4478B9AB2A5372FF /* Pods-changegamer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PF7JU79PDP;
 				INFOPLIST_FILE = changegamer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.changegamer.changegamer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -424,10 +501,12 @@
 		};
 		8E3D24CB1DB1FAC900B2D8FF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 420545F0F89043BB460FE6FC /* Pods-changegamer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PF7JU79PDP;
 				INFOPLIST_FILE = changegamer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.changegamer.changegamer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -508,6 +587,7 @@
 				8E3D24CB1DB1FAC900B2D8FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E3D24CC1DB1FAC900B2D8FF /* Build configuration list for PBXNativeTarget "changegamerTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +596,7 @@
 				8E3D24CE1DB1FAC900B2D8FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E3D24CF1DB1FAC900B2D8FF /* Build configuration list for PBXNativeTarget "changegamerUITests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +605,7 @@
 				8E3D24D11DB1FAC900B2D8FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
