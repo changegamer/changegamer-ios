@@ -39,9 +39,18 @@ class LoginViewController: UIViewController {
         }
     }
     
-    func createNewHiveAction(){
+    func createNewHivePressed()
+    {
         
+    }
+    
+    func joinExistingHivePressed()
+    {
         
+    }
+    
+    func signInPressed()
+    {
         
     }
     
