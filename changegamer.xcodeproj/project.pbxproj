@@ -8,13 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		3942A0495F0FB64528FE1CDA /* Pods_changegamer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A38D562B0210FAAB734BC110 /* Pods_changegamer.framework */; };
+		8E2AD9091DC67BD6009CEF5F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AD9081DC67BD6009CEF5F /* LoginViewController.swift */; };
+		8E2AD90E1DC67DED009CEF5F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AD90D1DC67DED009CEF5F /* AuthService.swift */; };
 		8E3D24A51DB1FAC900B2D8FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D24A41DB1FAC900B2D8FF /* AppDelegate.swift */; };
-		8E3D24A71DB1FAC900B2D8FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D24A61DB1FAC900B2D8FF /* ViewController.swift */; };
-		8E3D24AA1DB1FAC900B2D8FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E3D24A81DB1FAC900B2D8FF /* Main.storyboard */; };
+		8E3D24A71DB1FAC900B2D8FF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D24A61DB1FAC900B2D8FF /* MainViewController.swift */; };
 		8E3D24AC1DB1FAC900B2D8FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E3D24AB1DB1FAC900B2D8FF /* Assets.xcassets */; };
 		8E3D24AF1DB1FAC900B2D8FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E3D24AD1DB1FAC900B2D8FF /* LaunchScreen.storyboard */; };
 		8E3D24BA1DB1FAC900B2D8FF /* changegamerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D24B91DB1FAC900B2D8FF /* changegamerTests.swift */; };
 		8E3D24C51DB1FAC900B2D8FF /* changegamerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D24C41DB1FAC900B2D8FF /* changegamerUITests.swift */; };
+		8E4D5CD11DB204DD00CC2870 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4D5CD01DB204DD00CC2870 /* ProfileService.swift */; };
+		8E4D5CD51DB2184300CC2870 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4D5CD41DB2184300CC2870 /* Colors.swift */; };
+		8E4D5CD71DB225E400CC2870 /* CGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4D5CD61DB225E400CC2870 /* CGButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +41,11 @@
 /* Begin PBXFileReference section */
 		0FFFC6CE4478B9AB2A5372FF /* Pods-changegamer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-changegamer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-changegamer/Pods-changegamer.debug.xcconfig"; sourceTree = "<group>"; };
 		420545F0F89043BB460FE6FC /* Pods-changegamer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-changegamer.release.xcconfig"; path = "Pods/Target Support Files/Pods-changegamer/Pods-changegamer.release.xcconfig"; sourceTree = "<group>"; };
+		8E2AD9081DC67BD6009CEF5F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8E2AD90D1DC67DED009CEF5F /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		8E3D24A11DB1FAC900B2D8FF /* changegamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = changegamer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E3D24A41DB1FAC900B2D8FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8E3D24A61DB1FAC900B2D8FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8E3D24A91DB1FAC900B2D8FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8E3D24A61DB1FAC900B2D8FF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8E3D24AB1DB1FAC900B2D8FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E3D24AE1DB1FAC900B2D8FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E3D24B01DB1FAC900B2D8FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +55,9 @@
 		8E3D24C01DB1FAC900B2D8FF /* changegamerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = changegamerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E3D24C41DB1FAC900B2D8FF /* changegamerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = changegamerUITests.swift; sourceTree = "<group>"; };
 		8E3D24C61DB1FAC900B2D8FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E4D5CD01DB204DD00CC2870 /* ProfileService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
+		8E4D5CD41DB2184300CC2870 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		8E4D5CD61DB225E400CC2870 /* CGButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGButton.swift; sourceTree = "<group>"; };
 		A38D562B0210FAAB734BC110 /* Pods_changegamer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_changegamer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -88,6 +96,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8E2AD90A1DC67CFF009CEF5F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8E4D5CD01DB204DD00CC2870 /* ProfileService.swift */,
+				8E2AD90D1DC67DED009CEF5F /* AuthService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		8E3D24981DB1FAC800B2D8FF = {
 			isa = PBXGroup;
 			children = (
@@ -114,8 +131,11 @@
 			isa = PBXGroup;
 			children = (
 				8E3D24A41DB1FAC900B2D8FF /* AppDelegate.swift */,
-				8E3D24A61DB1FAC900B2D8FF /* ViewController.swift */,
-				8E3D24A81DB1FAC900B2D8FF /* Main.storyboard */,
+				8E3D24A61DB1FAC900B2D8FF /* MainViewController.swift */,
+				8E2AD9081DC67BD6009CEF5F /* LoginViewController.swift */,
+				8E2AD90A1DC67CFF009CEF5F /* Services */,
+				8E4D5CD41DB2184300CC2870 /* Colors.swift */,
+				8E4D5CD61DB225E400CC2870 /* CGButton.swift */,
 				8E3D24AB1DB1FAC900B2D8FF /* Assets.xcassets */,
 				8E3D24AD1DB1FAC900B2D8FF /* LaunchScreen.storyboard */,
 				8E3D24B01DB1FAC900B2D8FF /* Info.plist */,
@@ -215,12 +235,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Kenan Pulak";
 				TargetAttributes = {
 					8E3D24A01DB1FAC800B2D8FF = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = PF7JU79PDP;
+						DevelopmentTeam = VVW2YNDCG9;
 						ProvisioningStyle = Automatic;
 					};
 					8E3D24B41DB1FAC900B2D8FF = {
@@ -262,7 +282,6 @@
 			files = (
 				8E3D24AF1DB1FAC900B2D8FF /* LaunchScreen.storyboard in Resources */,
 				8E3D24AC1DB1FAC900B2D8FF /* Assets.xcassets in Resources */,
-				8E3D24AA1DB1FAC900B2D8FF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,8 +354,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E3D24A71DB1FAC900B2D8FF /* ViewController.swift in Sources */,
+				8E2AD9091DC67BD6009CEF5F /* LoginViewController.swift in Sources */,
+				8E3D24A71DB1FAC900B2D8FF /* MainViewController.swift in Sources */,
+				8E4D5CD51DB2184300CC2870 /* Colors.swift in Sources */,
+				8E4D5CD71DB225E400CC2870 /* CGButton.swift in Sources */,
 				8E3D24A51DB1FAC900B2D8FF /* AppDelegate.swift in Sources */,
+				8E4D5CD11DB204DD00CC2870 /* ProfileService.swift in Sources */,
+				8E2AD90E1DC67DED009CEF5F /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,14 +396,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8E3D24A81DB1FAC900B2D8FF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8E3D24A91DB1FAC900B2D8FF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8E3D24AD1DB1FAC900B2D8FF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -409,6 +425,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -431,7 +448,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -459,6 +476,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -475,7 +493,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -488,12 +506,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0FFFC6CE4478B9AB2A5372FF /* Pods-changegamer.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = PF7JU79PDP;
+				DEVELOPMENT_TEAM = VVW2YNDCG9;
 				INFOPLIST_FILE = changegamer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.changegamer.changegamer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.changegamer.hive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -503,12 +522,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 420545F0F89043BB460FE6FC /* Pods-changegamer.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = PF7JU79PDP;
+				DEVELOPMENT_TEAM = VVW2YNDCG9;
 				INFOPLIST_FILE = changegamer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.changegamer.changegamer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.changegamer.hive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

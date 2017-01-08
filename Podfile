@@ -6,6 +6,7 @@ inhibit_all_warnings!
 use_frameworks!
 
 workspace 'changegamer'
+project 'changegamer'
 
 target :changegamer do
 
@@ -14,9 +15,12 @@ target :changegamer do
   pod 'AsyncDisplayKit'
   pod 'BonMot'
   pod 'TTTAttributedLabel'
+  pod 'SnapKit', '~> 3.0.2'
 
   # Core
   pod 'Parse'
+  pod 'Fabric'
+  pod 'Crashlytics'
 
   post_install do |installer|
       installer.pods_project.targets.each do |target|
