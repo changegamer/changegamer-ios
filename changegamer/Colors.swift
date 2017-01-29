@@ -12,7 +12,9 @@ import UIKit
 extension UIColor{
     
     public enum ColorName : String {
-        case HiveYellow = "#FDD056"
+        case HiveYellow = "#FED149"
+        case HiveOrange = "#FFC000"
+        case HiveBlack = "#4A4A4A"
     }
     
     /**

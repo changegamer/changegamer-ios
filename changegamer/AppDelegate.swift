@@ -18,16 +18,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationDidFinishLaunching(_ application: UIApplication) {
         Fabric.with([Crashlytics.self])
+        
+        UINavigationBar.appearance().tintColor = UIColor.init(.HiveBlack)
+        UINavigationBar.appearance().backIndicatorImage = UIImage(named: "back-image");
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(named: "back-image")
+        
+        let navbarFont = graphikRegularWithSize(size: 24) 
+        
+        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: navbarFont, NSForegroundColorAttributeName:UIColor.init(.HiveBlack)]
+
+        UITextField.appearance().font = graphikRegularWithSize(size: 18);
+        UITextField.appearance().textColor = UIColor.init(.HiveBlack)
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         if let window = self.window {
             
+            let navigationController = UINavigationController()
+            
             if AuthService.isAuthenticated(){
-                window.rootViewController = MainViewController()
+                navigationController.viewControllers = [MainViewController()]
             }
             else{
-                window.rootViewController = LoginViewController()
+                navigationController.viewControllers = [InitialViewController()]
             }
             
+            window.rootViewController = navigationController
             window.backgroundColor = UIColor.white
             window.makeKeyAndVisible()
         }

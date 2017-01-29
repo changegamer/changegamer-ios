@@ -28,6 +28,7 @@ class MainViewController: UIViewController {
         loginButton.setTitle("Log In", for: UIControlState.normal)
         loginButton.setTitleColor(UIColor.white, for: UIControlState.normal)
         loginButton.backgroundColor = UIColor.init(.HiveYellow)
+        loginButton.titleLabel?.font = graphikRegularWithSize(size: 16)
         view.addSubview(loginButton)
         
         loginButton.snp.makeConstraints { (make) -> Void in

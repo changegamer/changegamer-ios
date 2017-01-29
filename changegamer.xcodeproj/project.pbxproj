@@ -8,7 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		3942A0495F0FB64528FE1CDA /* Pods_changegamer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A38D562B0210FAAB734BC110 /* Pods_changegamer.framework */; };
-		8E2AD9091DC67BD6009CEF5F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AD9081DC67BD6009CEF5F /* LoginViewController.swift */; };
+		8E18DD4A1E3D80A300FCDB1F /* Graphik-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E18DD381E3D80A300FCDB1F /* Graphik-Bold.otf */; };
+		8E18DD4C1E3D80A300FCDB1F /* Graphik-Extralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E18DD3A1E3D80A300FCDB1F /* Graphik-Extralight.otf */; };
+		8E18DD4E1E3D80A300FCDB1F /* Graphik-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E18DD3C1E3D80A300FCDB1F /* Graphik-Light.otf */; };
+		8E18DD4F1E3D80A300FCDB1F /* Graphik-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E18DD3D1E3D80A300FCDB1F /* Graphik-LightItalic.otf */; };
+		8E18DD501E3D80A300FCDB1F /* Graphik-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E18DD3E1E3D80A300FCDB1F /* Graphik-Medium.otf */; };
+		8E18DD521E3D80A300FCDB1F /* Graphik-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E18DD401E3D80A300FCDB1F /* Graphik-Regular.otf */; };
+		8E18DD5B1E3D80DC00FCDB1F /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18DD5A1E3D80DC00FCDB1F /* Fonts.swift */; };
+		8E18DD5D1E3D9DAE00FCDB1F /* AppearanceSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18DD5C1E3D9DAE00FCDB1F /* AppearanceSetup.swift */; };
+		8E18DD5F1E3DB09700FCDB1F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18DD5E1E3DB09700FCDB1F /* LoginViewController.swift */; };
+		8E2AD9091DC67BD6009CEF5F /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AD9081DC67BD6009CEF5F /* InitialViewController.swift */; };
 		8E2AD90E1DC67DED009CEF5F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AD90D1DC67DED009CEF5F /* AuthService.swift */; };
 		8E3D24A51DB1FAC900B2D8FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D24A41DB1FAC900B2D8FF /* AppDelegate.swift */; };
 		8E3D24A71DB1FAC900B2D8FF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D24A61DB1FAC900B2D8FF /* MainViewController.swift */; };
@@ -41,7 +50,16 @@
 /* Begin PBXFileReference section */
 		0FFFC6CE4478B9AB2A5372FF /* Pods-changegamer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-changegamer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-changegamer/Pods-changegamer.debug.xcconfig"; sourceTree = "<group>"; };
 		420545F0F89043BB460FE6FC /* Pods-changegamer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-changegamer.release.xcconfig"; path = "Pods/Target Support Files/Pods-changegamer/Pods-changegamer.release.xcconfig"; sourceTree = "<group>"; };
-		8E2AD9081DC67BD6009CEF5F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8E18DD381E3D80A300FCDB1F /* Graphik-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Graphik-Bold.otf"; sourceTree = "<group>"; };
+		8E18DD3A1E3D80A300FCDB1F /* Graphik-Extralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Graphik-Extralight.otf"; sourceTree = "<group>"; };
+		8E18DD3C1E3D80A300FCDB1F /* Graphik-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Graphik-Light.otf"; sourceTree = "<group>"; };
+		8E18DD3D1E3D80A300FCDB1F /* Graphik-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Graphik-LightItalic.otf"; sourceTree = "<group>"; };
+		8E18DD3E1E3D80A300FCDB1F /* Graphik-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Graphik-Medium.otf"; sourceTree = "<group>"; };
+		8E18DD401E3D80A300FCDB1F /* Graphik-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Graphik-Regular.otf"; sourceTree = "<group>"; };
+		8E18DD5A1E3D80DC00FCDB1F /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		8E18DD5C1E3D9DAE00FCDB1F /* AppearanceSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceSetup.swift; sourceTree = "<group>"; };
+		8E18DD5E1E3DB09700FCDB1F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8E2AD9081DC67BD6009CEF5F /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		8E2AD90D1DC67DED009CEF5F /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		8E3D24A11DB1FAC900B2D8FF /* changegamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = changegamer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E3D24A41DB1FAC900B2D8FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +114,31 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8E18DD341E3D806300FCDB1F /* Appearance */ = {
+			isa = PBXGroup;
+			children = (
+				8E4D5CD41DB2184300CC2870 /* Colors.swift */,
+				8E18DD5A1E3D80DC00FCDB1F /* Fonts.swift */,
+				8E18DD5C1E3D9DAE00FCDB1F /* AppearanceSetup.swift */,
+				8E4D5CD61DB225E400CC2870 /* CGButton.swift */,
+				8E18DD351E3D808500FCDB1F /* Fonts */,
+			);
+			name = Appearance;
+			sourceTree = "<group>";
+		};
+		8E18DD351E3D808500FCDB1F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8E18DD381E3D80A300FCDB1F /* Graphik-Bold.otf */,
+				8E18DD3A1E3D80A300FCDB1F /* Graphik-Extralight.otf */,
+				8E18DD3C1E3D80A300FCDB1F /* Graphik-Light.otf */,
+				8E18DD3D1E3D80A300FCDB1F /* Graphik-LightItalic.otf */,
+				8E18DD3E1E3D80A300FCDB1F /* Graphik-Medium.otf */,
+				8E18DD401E3D80A300FCDB1F /* Graphik-Regular.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		8E2AD90A1DC67CFF009CEF5F /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,10 +175,10 @@
 			children = (
 				8E3D24A41DB1FAC900B2D8FF /* AppDelegate.swift */,
 				8E3D24A61DB1FAC900B2D8FF /* MainViewController.swift */,
-				8E2AD9081DC67BD6009CEF5F /* LoginViewController.swift */,
+				8E2AD9081DC67BD6009CEF5F /* InitialViewController.swift */,
+				8E18DD5E1E3DB09700FCDB1F /* LoginViewController.swift */,
 				8E2AD90A1DC67CFF009CEF5F /* Services */,
-				8E4D5CD41DB2184300CC2870 /* Colors.swift */,
-				8E4D5CD61DB225E400CC2870 /* CGButton.swift */,
+				8E18DD341E3D806300FCDB1F /* Appearance */,
 				8E3D24AB1DB1FAC900B2D8FF /* Assets.xcassets */,
 				8E3D24AD1DB1FAC900B2D8FF /* LaunchScreen.storyboard */,
 				8E3D24B01DB1FAC900B2D8FF /* Info.plist */,
@@ -283,8 +326,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E18DD521E3D80A300FCDB1F /* Graphik-Regular.otf in Resources */,
+				8E18DD4E1E3D80A300FCDB1F /* Graphik-Light.otf in Resources */,
+				8E18DD4A1E3D80A300FCDB1F /* Graphik-Bold.otf in Resources */,
+				8E18DD4F1E3D80A300FCDB1F /* Graphik-LightItalic.otf in Resources */,
 				8E3D24AF1DB1FAC900B2D8FF /* LaunchScreen.storyboard in Resources */,
 				8E3D24AC1DB1FAC900B2D8FF /* Assets.xcassets in Resources */,
+				8E18DD501E3D80A300FCDB1F /* Graphik-Medium.otf in Resources */,
+				8E18DD4C1E3D80A300FCDB1F /* Graphik-Extralight.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,12 +419,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E2AD9091DC67BD6009CEF5F /* LoginViewController.swift in Sources */,
+				8E18DD5B1E3D80DC00FCDB1F /* Fonts.swift in Sources */,
+				8E18DD5D1E3D9DAE00FCDB1F /* AppearanceSetup.swift in Sources */,
+				8E2AD9091DC67BD6009CEF5F /* InitialViewController.swift in Sources */,
 				8E3D24A71DB1FAC900B2D8FF /* MainViewController.swift in Sources */,
 				8E4D5CD51DB2184300CC2870 /* Colors.swift in Sources */,
 				8E4D5CD71DB225E400CC2870 /* CGButton.swift in Sources */,
 				8E3D24A51DB1FAC900B2D8FF /* AppDelegate.swift in Sources */,
 				8E4D5CD11DB204DD00CC2870 /* ProfileService.swift in Sources */,
+				8E18DD5F1E3DB09700FCDB1F /* LoginViewController.swift in Sources */,
 				8E2AD90E1DC67DED009CEF5F /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
