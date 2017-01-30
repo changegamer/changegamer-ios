@@ -135,18 +135,19 @@ class InitialViewController: UIViewController {
     func createNewHivePressed()
     {
         print("Create New Hive Pressed");
+        self.navigationController?.pushViewController(CreateHiveViewController(), animated: true)
     }
     
     func joinExistingHivePressed()
     {
         print("Join Existing Hive Pressed");
+        self.navigationController?.pushViewController(JoinExistingHiveViewController(), animated: true)
     }
     
     func signInPressed()
     {
         print("Sign In Pressed");
         self.navigationController?.pushViewController(LoginViewController(), animated: true)
-
     }
     
     func goToRootController()

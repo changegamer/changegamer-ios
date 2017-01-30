@@ -13,6 +13,8 @@ import pop
 class LoginViewController: UIViewController {
     
     var window: UIWindow?
+    var userTextField: UITextField?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,14 +42,14 @@ class LoginViewController: UIViewController {
             NSForegroundColorAttributeName: UIColor.init(.HiveGray),
             NSFontAttributeName: UIFont(name: "Graphik-Light", size: 18.0)! ]
  
-        let userTextField = UITextField()
-        userTextField.attributedPlaceholder = NSAttributedString.init(string: "Username", attributes: multipleAttributes)
-        userTextField.textColor = UIColor.init(.HiveGray)
-        userTextField.font = graphikLightWithSize(size: 18.0)
-        userTextField.autocorrectionType = UITextAutocorrectionType.no
-        view.addSubview(userTextField)
+        userTextField = UITextField()
+        userTextField?.attributedPlaceholder = NSAttributedString.init(string: "Username", attributes: multipleAttributes)
+        userTextField?.textColor = UIColor.init(.HiveGray)
+        userTextField?.font = graphikLightWithSize(size: 18.0)
+        userTextField?.autocorrectionType = UITextAutocorrectionType.no
+        view.addSubview(userTextField!)
         
-        userTextField.snp.makeConstraints { (make) -> Void in
+        userTextField?.snp.makeConstraints { (make) -> Void in
             make.top.equalTo(240)
             make.height.equalTo(44)
             make.leadingMargin.equalTo(15)
@@ -74,7 +76,7 @@ class LoginViewController: UIViewController {
         let usernameLowerBorder = CALayer()
         usernameLowerBorder.backgroundColor = UIColor.init(.HiveBorder).cgColor
         usernameLowerBorder.frame = CGRect(x: 0, y: 43, width: self.view.frame.size.width-30, height: 1.0)
-        userTextField.layer.addSublayer(usernameLowerBorder)
+        userTextField?.layer.addSublayer(usernameLowerBorder)
         
         let passwordLowerBorder = CALayer()
         passwordLowerBorder.backgroundColor = UIColor.init(.HiveBorder).cgColor
@@ -97,6 +99,13 @@ class LoginViewController: UIViewController {
             make.centerX.equalTo(self.view.center.x)
         }
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        userTextField?.becomeFirstResponder()
+
     }
     
     func signInPressed()

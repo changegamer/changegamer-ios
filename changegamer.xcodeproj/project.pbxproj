@@ -19,6 +19,8 @@
 		8E18DD5F1E3DB09700FCDB1F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18DD5E1E3DB09700FCDB1F /* LoginViewController.swift */; };
 		8E2AD9091DC67BD6009CEF5F /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AD9081DC67BD6009CEF5F /* InitialViewController.swift */; };
 		8E2AD90E1DC67DED009CEF5F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AD90D1DC67DED009CEF5F /* AuthService.swift */; };
+		8E37CADC1E3ECC0200203D73 /* CreateHiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E37CADB1E3ECC0200203D73 /* CreateHiveViewController.swift */; };
+		8E37CADE1E3ECC6100203D73 /* JoinExistingHiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E37CADD1E3ECC6100203D73 /* JoinExistingHiveViewController.swift */; };
 		8E3D24A51DB1FAC900B2D8FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D24A41DB1FAC900B2D8FF /* AppDelegate.swift */; };
 		8E3D24A71DB1FAC900B2D8FF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D24A61DB1FAC900B2D8FF /* MainViewController.swift */; };
 		8E3D24AC1DB1FAC900B2D8FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E3D24AB1DB1FAC900B2D8FF /* Assets.xcassets */; };
@@ -61,6 +63,8 @@
 		8E18DD5E1E3DB09700FCDB1F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8E2AD9081DC67BD6009CEF5F /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		8E2AD90D1DC67DED009CEF5F /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		8E37CADB1E3ECC0200203D73 /* CreateHiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateHiveViewController.swift; sourceTree = "<group>"; };
+		8E37CADD1E3ECC6100203D73 /* JoinExistingHiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinExistingHiveViewController.swift; sourceTree = "<group>"; };
 		8E3D24A11DB1FAC900B2D8FF /* changegamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = changegamer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E3D24A41DB1FAC900B2D8FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E3D24A61DB1FAC900B2D8FF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +181,8 @@
 				8E2AD9081DC67BD6009CEF5F /* InitialViewController.swift */,
 				8E18DD5E1E3DB09700FCDB1F /* LoginViewController.swift */,
 				8E3D24A61DB1FAC900B2D8FF /* MainViewController.swift */,
+				8E37CADB1E3ECC0200203D73 /* CreateHiveViewController.swift */,
+				8E37CADD1E3ECC6100203D73 /* JoinExistingHiveViewController.swift */,
 				8E2AD90A1DC67CFF009CEF5F /* Services */,
 				8E18DD341E3D806300FCDB1F /* Appearance */,
 				8E3D24AB1DB1FAC900B2D8FF /* Assets.xcassets */,
@@ -420,11 +426,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E18DD5B1E3D80DC00FCDB1F /* Fonts.swift in Sources */,
+				8E37CADE1E3ECC6100203D73 /* JoinExistingHiveViewController.swift in Sources */,
 				8E18DD5D1E3D9DAE00FCDB1F /* AppearanceSetup.swift in Sources */,
 				8E2AD9091DC67BD6009CEF5F /* InitialViewController.swift in Sources */,
 				8E3D24A71DB1FAC900B2D8FF /* MainViewController.swift in Sources */,
 				8E4D5CD51DB2184300CC2870 /* Colors.swift in Sources */,
 				8E4D5CD71DB225E400CC2870 /* CGButton.swift in Sources */,
+				8E37CADC1E3ECC0200203D73 /* CreateHiveViewController.swift in Sources */,
 				8E3D24A51DB1FAC900B2D8FF /* AppDelegate.swift in Sources */,
 				8E4D5CD11DB204DD00CC2870 /* ProfileService.swift in Sources */,
 				8E18DD5F1E3DB09700FCDB1F /* LoginViewController.swift in Sources */,
