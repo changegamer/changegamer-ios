@@ -18,6 +18,12 @@ class InitialViewController: UIViewController {
         super.viewDidLoad()
         window = UIWindow(frame: UIScreen.main.bounds)
         
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(goToRootController),
+            name: NSNotification.Name(rawValue: "kLogoutNotification"),
+            object: nil)
+        
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
@@ -141,6 +147,12 @@ class InitialViewController: UIViewController {
         print("Sign In Pressed");
         self.navigationController?.pushViewController(LoginViewController(), animated: true)
 
+    }
+    
+    func goToRootController()
+    {
+        print("Go to Root Controller");
+        _ = navigationController?.popViewController(animated: true)
     }
     
     override func didReceiveMemoryWarning() {

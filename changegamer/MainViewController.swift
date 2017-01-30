@@ -17,27 +17,29 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         window = UIWindow(frame: UIScreen.main.bounds)
+        
         view.backgroundColor = UIColor.white
         
-        let myView = UIView(frame: CGRect(x: 0, y: 20, width: (self.window?.frame.width)!, height: 300))
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.isNavigationBarHidden = false
+
+        let backButton = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem = backButton
+        self.navigationItem.title = "hive"
         
-        myView.backgroundColor = UIColor.red
-        view.addSubview(myView)
+        let menuButton = UIBarButtonItem(image: #imageLiteral(resourceName: "menu-icon"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(menuButtonPressed))
+        self.navigationItem.leftBarButtonItem = menuButton;
         
-        let loginButton = UIButton(type: UIButtonType.custom)
-        loginButton.setTitle("Log In", for: UIControlState.normal)
-        loginButton.setTitleColor(UIColor.white, for: UIControlState.normal)
-        loginButton.backgroundColor = UIColor.init(.HiveYellow)
-        loginButton.titleLabel?.font = graphikRegularWithSize(size: 16)
-        view.addSubview(loginButton)
-        
-        loginButton.snp.makeConstraints { (make) -> Void in
-            make.leadingMargin.equalTo(15)
-            make.trailingMargin.equalTo(15)
-            make.bottom.equalTo(-60)
-            make.height.equalTo(55)
-            make.centerX.equalTo(self.view.center.x)
-        }
+        let tableView = UITableView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height), style: UITableViewStyle.plain)
+        self.view.addSubview(tableView)
+    }
+    
+    func menuButtonPressed()
+    {
+        print("menu Button Pressed")
+        NotificationCenter.default.post(name: Notification.Name("kLogoutNotification"), object: nil)
     }
 
     override func didReceiveMemoryWarning() {

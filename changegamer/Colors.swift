@@ -15,6 +15,8 @@ extension UIColor{
         case HiveYellow = "#FED149"
         case HiveOrange = "#FFC000"
         case HiveBlack = "#4A4A4A"
+        case HiveGray = "#9B9B9B"
+        case HiveBorder = "#979797"
     }
     
     /**
