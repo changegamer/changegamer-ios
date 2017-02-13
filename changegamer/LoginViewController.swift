@@ -47,6 +47,7 @@ class LoginViewController: UIViewController {
         userTextField?.textColor = UIColor.init(.HiveGray)
         userTextField?.font = graphikLightWithSize(size: 18.0)
         userTextField?.autocorrectionType = UITextAutocorrectionType.no
+        userTextField?.clipsToBounds = true
         view.addSubview(userTextField!)
         
         userTextField?.snp.makeConstraints { (make) -> Void in
@@ -63,6 +64,7 @@ class LoginViewController: UIViewController {
         passwordTextField.font = graphikLightWithSize(size: 18.0)
         passwordTextField.autocorrectionType = UITextAutocorrectionType.no
         passwordTextField.isSecureTextEntry = true
+        passwordTextField.clipsToBounds = true
         view.addSubview(passwordTextField)
         
         passwordTextField.snp.makeConstraints { (make) -> Void in
@@ -94,7 +96,7 @@ class LoginViewController: UIViewController {
         signInButton.snp.makeConstraints { (make) -> Void in
             make.leadingMargin.equalTo(-10)
             make.trailingMargin.equalTo(-10)
-            make.top.equalTo(396)
+            make.bottom.equalTo(-216)
             make.height.equalTo(55)
             make.centerX.equalTo(self.view.center.x)
         }

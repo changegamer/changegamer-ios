@@ -17,6 +17,10 @@
 		8E18DD5B1E3D80DC00FCDB1F /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18DD5A1E3D80DC00FCDB1F /* Fonts.swift */; };
 		8E18DD5D1E3D9DAE00FCDB1F /* AppearanceSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18DD5C1E3D9DAE00FCDB1F /* AppearanceSetup.swift */; };
 		8E18DD5F1E3DB09700FCDB1F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18DD5E1E3DB09700FCDB1F /* LoginViewController.swift */; };
+		8E2616301E518D2B008F75F2 /* BeeKeeperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E26162F1E518D2B008F75F2 /* BeeKeeperModel.swift */; };
+		8E2616341E51992A008F75F2 /* AddHiveMembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2616331E51992A008F75F2 /* AddHiveMembersViewController.swift */; };
+		8E2616361E519A5C008F75F2 /* AddHiveMemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2616351E519A5C008F75F2 /* AddHiveMemberTableViewCell.swift */; };
+		8E26163A1E519BB1008F75F2 /* HiveMemberAddedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2616391E519BB1008F75F2 /* HiveMemberAddedTableViewCell.swift */; };
 		8E2AD9091DC67BD6009CEF5F /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AD9081DC67BD6009CEF5F /* InitialViewController.swift */; };
 		8E2AD90E1DC67DED009CEF5F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AD90D1DC67DED009CEF5F /* AuthService.swift */; };
 		8E37CADC1E3ECC0200203D73 /* CreateHiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E37CADB1E3ECC0200203D73 /* CreateHiveViewController.swift */; };
@@ -30,6 +34,10 @@
 		8E4D5CD11DB204DD00CC2870 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4D5CD01DB204DD00CC2870 /* ProfileService.swift */; };
 		8E4D5CD51DB2184300CC2870 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4D5CD41DB2184300CC2870 /* Colors.swift */; };
 		8E4D5CD71DB225E400CC2870 /* CGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4D5CD61DB225E400CC2870 /* CGButton.swift */; };
+		8E65E7231E46B83B00627CE0 /* HiveCreationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65E7221E46B83B00627CE0 /* HiveCreationService.swift */; };
+		8E65E7271E46B8E100627CE0 /* HiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65E7261E46B8E100627CE0 /* HiveModel.swift */; };
+		8E65E7291E46C73D00627CE0 /* CreateBeeKeeperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65E7281E46C73D00627CE0 /* CreateBeeKeeperViewController.swift */; };
+		8E65E72D1E46C92E00627CE0 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65E72C1E46C92E00627CE0 /* TextFieldTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +69,10 @@
 		8E18DD5A1E3D80DC00FCDB1F /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		8E18DD5C1E3D9DAE00FCDB1F /* AppearanceSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceSetup.swift; sourceTree = "<group>"; };
 		8E18DD5E1E3DB09700FCDB1F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8E26162F1E518D2B008F75F2 /* BeeKeeperModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeeKeeperModel.swift; sourceTree = "<group>"; };
+		8E2616331E51992A008F75F2 /* AddHiveMembersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHiveMembersViewController.swift; sourceTree = "<group>"; };
+		8E2616351E519A5C008F75F2 /* AddHiveMemberTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHiveMemberTableViewCell.swift; sourceTree = "<group>"; };
+		8E2616391E519BB1008F75F2 /* HiveMemberAddedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HiveMemberAddedTableViewCell.swift; sourceTree = "<group>"; };
 		8E2AD9081DC67BD6009CEF5F /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		8E2AD90D1DC67DED009CEF5F /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		8E37CADB1E3ECC0200203D73 /* CreateHiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateHiveViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +92,10 @@
 		8E4D5CD01DB204DD00CC2870 /* ProfileService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
 		8E4D5CD41DB2184300CC2870 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		8E4D5CD61DB225E400CC2870 /* CGButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGButton.swift; sourceTree = "<group>"; };
+		8E65E7221E46B83B00627CE0 /* HiveCreationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HiveCreationService.swift; sourceTree = "<group>"; };
+		8E65E7261E46B8E100627CE0 /* HiveModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HiveModel.swift; sourceTree = "<group>"; };
+		8E65E7281E46C73D00627CE0 /* CreateBeeKeeperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateBeeKeeperViewController.swift; sourceTree = "<group>"; };
+		8E65E72C1E46C92E00627CE0 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		A38D562B0210FAAB734BC110 /* Pods_changegamer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_changegamer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -121,11 +137,11 @@
 		8E18DD341E3D806300FCDB1F /* Appearance */ = {
 			isa = PBXGroup;
 			children = (
+				8E18DD351E3D808500FCDB1F /* Fonts */,
 				8E4D5CD41DB2184300CC2870 /* Colors.swift */,
 				8E18DD5A1E3D80DC00FCDB1F /* Fonts.swift */,
 				8E18DD5C1E3D9DAE00FCDB1F /* AppearanceSetup.swift */,
 				8E4D5CD61DB225E400CC2870 /* CGButton.swift */,
-				8E18DD351E3D808500FCDB1F /* Fonts */,
 			);
 			name = Appearance;
 			sourceTree = "<group>";
@@ -148,6 +164,7 @@
 			children = (
 				8E4D5CD01DB204DD00CC2870 /* ProfileService.swift */,
 				8E2AD90D1DC67DED009CEF5F /* AuthService.swift */,
+				8E65E7221E46B83B00627CE0 /* HiveCreationService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -177,12 +194,11 @@
 		8E3D24A31DB1FAC900B2D8FF /* changegamer */ = {
 			isa = PBXGroup;
 			children = (
+				8E65E72B1E46C8FD00627CE0 /* TableViewCells */,
+				8E65E72A1E46C8F100627CE0 /* Views */,
 				8E3D24A41DB1FAC900B2D8FF /* AppDelegate.swift */,
-				8E2AD9081DC67BD6009CEF5F /* InitialViewController.swift */,
-				8E18DD5E1E3DB09700FCDB1F /* LoginViewController.swift */,
-				8E3D24A61DB1FAC900B2D8FF /* MainViewController.swift */,
-				8E37CADB1E3ECC0200203D73 /* CreateHiveViewController.swift */,
-				8E37CADD1E3ECC6100203D73 /* JoinExistingHiveViewController.swift */,
+				8E65E7241E46B89C00627CE0 /* View Controllers */,
+				8E65E7251E46B8A500627CE0 /* Models */,
 				8E2AD90A1DC67CFF009CEF5F /* Services */,
 				8E18DD341E3D806300FCDB1F /* Appearance */,
 				8E3D24AB1DB1FAC900B2D8FF /* Assets.xcassets */,
@@ -208,6 +224,46 @@
 				8E3D24C61DB1FAC900B2D8FF /* Info.plist */,
 			);
 			path = changegamerUITests;
+			sourceTree = "<group>";
+		};
+		8E65E7241E46B89C00627CE0 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8E2AD9081DC67BD6009CEF5F /* InitialViewController.swift */,
+				8E18DD5E1E3DB09700FCDB1F /* LoginViewController.swift */,
+				8E3D24A61DB1FAC900B2D8FF /* MainViewController.swift */,
+				8E37CADB1E3ECC0200203D73 /* CreateHiveViewController.swift */,
+				8E37CADD1E3ECC6100203D73 /* JoinExistingHiveViewController.swift */,
+				8E65E7281E46C73D00627CE0 /* CreateBeeKeeperViewController.swift */,
+				8E2616331E51992A008F75F2 /* AddHiveMembersViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		8E65E7251E46B8A500627CE0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8E65E7261E46B8E100627CE0 /* HiveModel.swift */,
+				8E26162F1E518D2B008F75F2 /* BeeKeeperModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		8E65E72A1E46C8F100627CE0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		8E65E72B1E46C8FD00627CE0 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				8E65E72C1E46C92E00627CE0 /* TextFieldTableViewCell.swift */,
+				8E2616351E519A5C008F75F2 /* AddHiveMemberTableViewCell.swift */,
+				8E2616391E519BB1008F75F2 /* HiveMemberAddedTableViewCell.swift */,
+			);
+			name = TableViewCells;
 			sourceTree = "<group>";
 		};
 		9F1F52922690E96D5DD4F5AE /* Frameworks */ = {
@@ -428,15 +484,23 @@
 				8E18DD5B1E3D80DC00FCDB1F /* Fonts.swift in Sources */,
 				8E37CADE1E3ECC6100203D73 /* JoinExistingHiveViewController.swift in Sources */,
 				8E18DD5D1E3D9DAE00FCDB1F /* AppearanceSetup.swift in Sources */,
+				8E65E72D1E46C92E00627CE0 /* TextFieldTableViewCell.swift in Sources */,
 				8E2AD9091DC67BD6009CEF5F /* InitialViewController.swift in Sources */,
 				8E3D24A71DB1FAC900B2D8FF /* MainViewController.swift in Sources */,
+				8E26163A1E519BB1008F75F2 /* HiveMemberAddedTableViewCell.swift in Sources */,
 				8E4D5CD51DB2184300CC2870 /* Colors.swift in Sources */,
 				8E4D5CD71DB225E400CC2870 /* CGButton.swift in Sources */,
 				8E37CADC1E3ECC0200203D73 /* CreateHiveViewController.swift in Sources */,
+				8E2616361E519A5C008F75F2 /* AddHiveMemberTableViewCell.swift in Sources */,
 				8E3D24A51DB1FAC900B2D8FF /* AppDelegate.swift in Sources */,
+				8E65E7271E46B8E100627CE0 /* HiveModel.swift in Sources */,
 				8E4D5CD11DB204DD00CC2870 /* ProfileService.swift in Sources */,
+				8E65E7291E46C73D00627CE0 /* CreateBeeKeeperViewController.swift in Sources */,
+				8E2616301E518D2B008F75F2 /* BeeKeeperModel.swift in Sources */,
 				8E18DD5F1E3DB09700FCDB1F /* LoginViewController.swift in Sources */,
 				8E2AD90E1DC67DED009CEF5F /* AuthService.swift in Sources */,
+				8E2616341E51992A008F75F2 /* AddHiveMembersViewController.swift in Sources */,
+				8E65E7231E46B83B00627CE0 /* HiveCreationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
