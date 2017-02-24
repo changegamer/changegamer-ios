@@ -104,8 +104,8 @@ class AddHiveMembersViewController: UIViewController, UITableViewDataSource, UIT
         case 2:
             let hiveMemberAddedCell:HiveMemberAddedTableViewCell = tableView.dequeueReusableCell(withIdentifier: "HiveMemberAddedTableViewCell", for: indexPath as IndexPath) as! HiveMemberAddedTableViewCell
             hiveMemberAddedCell.selectionStyle = UITableViewCellSelectionStyle.none
-            let beeKeeper = (HiveCreationService.sharedInstance.hiveModel?.beeKeepers?[indexPath.row])! as BeeKeeperModel
-            hiveMemberAddedCell.titleLabel.text = beeKeeper.firstName
+            let honeyBeeModel = (HiveCreationService.sharedInstance.hiveModel?.honeyBees?[indexPath.row])! as HoneyBeeModel
+            hiveMemberAddedCell.titleLabel.text = honeyBeeModel.firstName
             hiveMemberAddedCell.subTitleLabel.text = "Honey Bee"
             return hiveMemberAddedCell
         case 3:
@@ -177,13 +177,12 @@ class AddHiveMembersViewController: UIViewController, UITableViewDataSource, UIT
         createBeeKeeperViewController.beeKeeperType = .normal
         
         self.navigationController?.pushViewController(createBeeKeeperViewController, animated: true)
-
     }
     
     func createNewHoneyBee()
     {
         //temporarily show WIP AlertView
-        
+        /*
         let alertController = UIAlertController(title: "WIP", message: "Adding a Honey Bee is still in progress", preferredStyle: UIAlertControllerStyle.alert)
         
         // Replace UIAlertActionStyle.Default by UIAlertActionStyle.default
@@ -195,7 +194,10 @@ class AddHiveMembersViewController: UIViewController, UITableViewDataSource, UIT
         // alertController.addAction(DestructiveAction)
         alertController.addAction(okAction)
         self.present(alertController, animated: true, completion: nil)
+        */
         
+        let createHoneyBeeViewController = CreateHoneyBeeViewController()
+        self.navigationController?.pushViewController(createHoneyBeeViewController, animated: true)
     }
     
     func nextButtonPressed()
@@ -209,7 +211,3 @@ class AddHiveMembersViewController: UIViewController, UITableViewDataSource, UIT
         // Dispose of any resources that can be recreated.
     }
 }
-
-
-
-

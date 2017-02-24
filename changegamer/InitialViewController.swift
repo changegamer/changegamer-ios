@@ -153,7 +153,6 @@ class InitialViewController: UIViewController {
     func goToRootController()
     {
         print("Go to Root Controller");
-        self.navigationController?.popToRootViewController(animated: false)
     }
     
     override func didReceiveMemoryWarning() {

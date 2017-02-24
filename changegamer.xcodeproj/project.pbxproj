@@ -40,6 +40,8 @@
 		8E65E7271E46B8E100627CE0 /* HiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65E7261E46B8E100627CE0 /* HiveModel.swift */; };
 		8E65E7291E46C73D00627CE0 /* CreateBeeKeeperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65E7281E46C73D00627CE0 /* CreateBeeKeeperViewController.swift */; };
 		8E65E72D1E46C92E00627CE0 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65E72C1E46C92E00627CE0 /* TextFieldTableViewCell.swift */; };
+		8E75709F1E6025250054EBC6 /* CreateHoneyBeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E75709E1E6025250054EBC6 /* CreateHoneyBeeViewController.swift */; };
+		8E7570A11E6025910054EBC6 /* HoneyBeeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7570A01E6025910054EBC6 /* HoneyBeeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,8 @@
 		8E65E7261E46B8E100627CE0 /* HiveModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HiveModel.swift; sourceTree = "<group>"; };
 		8E65E7281E46C73D00627CE0 /* CreateBeeKeeperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateBeeKeeperViewController.swift; sourceTree = "<group>"; };
 		8E65E72C1E46C92E00627CE0 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		8E75709E1E6025250054EBC6 /* CreateHoneyBeeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateHoneyBeeViewController.swift; sourceTree = "<group>"; };
+		8E7570A01E6025910054EBC6 /* HoneyBeeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoneyBeeModel.swift; sourceTree = "<group>"; };
 		A38D562B0210FAAB734BC110 /* Pods_changegamer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_changegamer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -241,6 +245,7 @@
 				8E37CADD1E3ECC6100203D73 /* JoinExistingHiveViewController.swift */,
 				8E65E7281E46C73D00627CE0 /* CreateBeeKeeperViewController.swift */,
 				8E2616331E51992A008F75F2 /* AddHiveMembersViewController.swift */,
+				8E75709E1E6025250054EBC6 /* CreateHoneyBeeViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -250,6 +255,7 @@
 			children = (
 				8E65E7261E46B8E100627CE0 /* HiveModel.swift */,
 				8E26162F1E518D2B008F75F2 /* BeeKeeperModel.swift */,
+				8E7570A01E6025910054EBC6 /* HoneyBeeModel.swift */,
 				8E26163B1E5C20AE008F75F2 /* HiveEnums.swift */,
 			);
 			name = Models;
@@ -501,7 +507,9 @@
 				8E2616361E519A5C008F75F2 /* AddHiveMemberTableViewCell.swift in Sources */,
 				8E26163E1E5C22AC008F75F2 /* HiveUtilities.swift in Sources */,
 				8E3D24A51DB1FAC900B2D8FF /* AppDelegate.swift in Sources */,
+				8E7570A11E6025910054EBC6 /* HoneyBeeModel.swift in Sources */,
 				8E65E7271E46B8E100627CE0 /* HiveModel.swift in Sources */,
+				8E75709F1E6025250054EBC6 /* CreateHoneyBeeViewController.swift in Sources */,
 				8E4D5CD11DB204DD00CC2870 /* ProfileService.swift in Sources */,
 				8E65E7291E46C73D00627CE0 /* CreateBeeKeeperViewController.swift in Sources */,
 				8E2616301E518D2B008F75F2 /* BeeKeeperModel.swift in Sources */,
