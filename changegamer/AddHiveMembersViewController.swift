@@ -28,8 +28,6 @@ class AddHiveMembersViewController: UIViewController, UITableViewDataSource, UIT
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.isNavigationBarHidden = false
         
-        //let backButton = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
-        //self.navigationItem.backBarButtonItem = backButton
         let backButton = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
         self.navigationItem.backBarButtonItem = backButton
         self.navigationItem.title = (HiveCreationService.sharedInstance.hiveModel?.hiveName)! + " Hive"
@@ -89,7 +87,14 @@ class AddHiveMembersViewController: UIViewController, UITableViewDataSource, UIT
             hiveMemberAddedCell.selectionStyle = UITableViewCellSelectionStyle.none
             let beeKeeper = (HiveCreationService.sharedInstance.hiveModel?.beeKeepers?[indexPath.row])! as BeeKeeperModel
             hiveMemberAddedCell.titleLabel.text = beeKeeper.firstName
-            hiveMemberAddedCell.subTitleLabel.text = "Bee Keeper"
+            switch beeKeeper.type! {
+            case .head:
+                hiveMemberAddedCell.subTitleLabel.text = "Head Bee Keeper"
+                break
+            case .normal:
+                hiveMemberAddedCell.subTitleLabel.text = "Bee Keeper"
+                break
+            }
             return hiveMemberAddedCell
         case 1:
             let addHiveMemberTableViewCell:AddHiveMemberTableViewCell = tableView.dequeueReusableCell(withIdentifier: "AddHiveMemberTableViewCell", for: indexPath as IndexPath) as! AddHiveMemberTableViewCell
@@ -169,7 +174,7 @@ class AddHiveMembersViewController: UIViewController, UITableViewDataSource, UIT
     func createNewBeeKeeper()
     {
         let createBeeKeeperViewController = CreateBeeKeeperViewController()
-        createBeeKeeperViewController.beeKeeperType = .head
+        createBeeKeeperViewController.beeKeeperType = .normal
         
         self.navigationController?.pushViewController(createBeeKeeperViewController, animated: true)
 

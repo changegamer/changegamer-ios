@@ -21,16 +21,25 @@ class BeeKeeperModel: NSObject {
 
     var firstName: String?
     var lastName: String?
-    var dob : String?
+    var dob : Date?
     var relationship: String?
     var email: String?
     var password: String?
     var confirm: String?
-    var type: String?
+    var type: BeeKeeperType?
     
     func allFieldsEntered() -> Bool
     {
-        if (self.firstName.isNilOrEmpty || self.lastName.isNilOrEmpty || self.dob.isNilOrEmpty || self.relationship.isNilOrEmpty || self.email.isNilOrEmpty ||
+        var emptyDate: Bool?
+        if dob != nil{
+            emptyDate = false
+        }
+        else
+        {
+            emptyDate = true
+        }
+        
+        if (self.firstName.isNilOrEmpty || self.lastName.isNilOrEmpty || emptyDate! || self.relationship.isNilOrEmpty || self.email.isNilOrEmpty ||
             self.password.isNilOrEmpty || self.confirm.isNilOrEmpty)
         {
         return false
@@ -38,6 +47,27 @@ class BeeKeeperModel: NSObject {
         else
         {
         return true
+        }
+    }
+    
+    func allNormalFieldsEntered() -> Bool
+    {
+        var emptyDate: Bool?
+        if dob != nil{
+            emptyDate = false
+        }
+        else
+        {
+            emptyDate = true
+        }
+        
+        if (self.firstName.isNilOrEmpty || self.lastName.isNilOrEmpty || emptyDate! || self.relationship.isNilOrEmpty || self.email.isNilOrEmpty)
+        {
+            return false
+        }
+        else
+        {
+            return true
         }
     }
     

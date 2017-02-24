@@ -10,6 +10,7 @@ import Foundation
 
 class HiveModel: NSObject {
 
+    var objectID: String?
     var hiveName: String?
     var beeKeepers : Array<BeeKeeperModel>? = [BeeKeeperModel]()
     var honeyBees : Array<Any>? = [Any]()

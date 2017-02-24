@@ -10,28 +10,22 @@ import UIKit
 import SnapKit
 import pop
 
-class CreateBeeKeeperViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
-    
-    public enum BeeKeeperType{
-        case head, normal
-    }
+class CreateBeeKeeperViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
     var window: UIWindow?
     var tableView : UITableView?
     var beeKeeperType : BeeKeeperType?
     var activeField: UITextField?
     var beeKeeperModel: BeeKeeperModel?
+    let adminLevels:[String] = ["", HiveRelationship.Father.rawValue, HiveRelationship.Mother.rawValue, HiveRelationship.Babysitter.rawValue, HiveRelationship.Caregiver.rawValue, HiveRelationship.Other.rawValue]
 
     override func viewDidLoad() {
         
         super.viewDidLoad()
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        enum BeeKeeperType{
-            case head, normal
-        }
-        
         beeKeeperModel = BeeKeeperModel()
+        beeKeeperModel?.type = beeKeeperType
         
         view.backgroundColor = UIColor.white
         self.automaticallyAdjustsScrollViewInsets = false;
@@ -95,19 +89,38 @@ class CreateBeeKeeperViewController: UIViewController, UITableViewDataSource, UI
         
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: - Table View Delegate
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        switch section {
-        case 0:
-            return 4
-        case 1:
-            return 3
-        default:
-            return 0
+        switch beeKeeperType! {
+        case .head:
+            switch section {
+            case 0:
+                return 4
+            case 1:
+                return 3
+            default:
+                return 0
+            }
+        case .normal:
+            switch section {
+            case 0:
+                return 4
+            case 1:
+                return 1
+            default:
+                return 0
+            }
         }
     }
     
@@ -214,7 +227,7 @@ class CreateBeeKeeperViewController: UIViewController, UITableViewDataSource, UI
         }
     }
     
-    // Mark: - TableViewCell TextField Delegate
+    // MARK: - TextField Delegate
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         self.activeField = textField
@@ -223,6 +236,30 @@ class CreateBeeKeeperViewController: UIViewController, UITableViewDataSource, UI
 
         self.tableView?.scrollToRow(at: (tableView?.indexPath(for: cell))!, at: UITableViewScrollPosition.top, animated: true)
         
+        switch textField.tag{
+        case 0: break
+        case 1: break
+        case 2:
+            // show date picker
+            self.showDatePicker()
+            break
+        case 3:
+            // show relationship picker
+            self.showAdminLevelPicker()
+            break
+        case 4:
+            beeKeeperModel?.email = textField.text
+            break
+        case 5:
+            beeKeeperModel?.password = textField.text
+            break
+        case 6:
+            beeKeeperModel?.confirm = textField.text
+            break
+        default:
+            break;
+        }
+        
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -230,44 +267,64 @@ class CreateBeeKeeperViewController: UIViewController, UITableViewDataSource, UI
         switch textField.tag {
         case 0:
             beeKeeperModel?.firstName = textField.text
+            break
         case 1:
             beeKeeperModel?.lastName = textField.text
+            break
         case 2:
-            beeKeeperModel?.dob = textField.text
+            //beeKeeperModel?.dob = textField.text
+            break
         case 3:
-            beeKeeperModel?.relationship = textField.text
+            //beeKeeperModel?.relationship = textField.text
+            break
         case 4:
             beeKeeperModel?.email = textField.text
+            break
         case 5:
             beeKeeperModel?.password = textField.text
+            break
         case 6:
             beeKeeperModel?.confirm = textField.text
         default:
-            break;
+            break
         }
         
-        if (beeKeeperModel?.allFieldsEntered())!
-        {
-            print("All Fields Entered")
-            
-            self.navigationItem.rightBarButtonItem?.isEnabled = true
-            
-            if (beeKeeperModel?.passwordsMatch())!
+        switch beeKeeperType! {
+        case .head:
+            if (beeKeeperModel?.allFieldsEntered())!
             {
-                print("Passwords Match")
+                print("All Fields Entered")
+                
+                self.navigationItem.rightBarButtonItem?.isEnabled = true
+                
+                if (beeKeeperModel?.passwordsMatch())!
+                {
+                    print("Passwords Match")
+                }
+                else
+                {
+                    print("Passwords Don't Match")
+                }
             }
             else
             {
-                print("Passwords Don't Match")
+                self.navigationItem.rightBarButtonItem?.isEnabled = false
+                
+                print("Fields Missing")
+            }
+            break;
+        case .normal:
+            if (beeKeeperModel?.allNormalFieldsEntered())!
+            {
+                print("All Fields Entered")
+                self.navigationItem.rightBarButtonItem?.isEnabled = true
+            }
+            else
+            {
+                self.navigationItem.rightBarButtonItem?.isEnabled = false
+                print("Fields Missing")
             }
         }
-        else
-        {
-            self.navigationItem.rightBarButtonItem?.isEnabled = false
-
-            print("Fields Missing")
-        }
-        
         self.activeField = nil
     }
     
@@ -285,13 +342,6 @@ class CreateBeeKeeperViewController: UIViewController, UITableViewDataSource, UI
         return false
     }
     
-    func checkIfAllFieldsAreFilled() -> Bool {
-        
-        
-        
-        return false
-    }
-    
     func nextButtonPressed()
     {
         HiveCreationService.sharedInstance.hiveModel?.beeKeepers?.append(beeKeeperModel!)
@@ -301,9 +351,53 @@ class CreateBeeKeeperViewController: UIViewController, UITableViewDataSource, UI
         self.navigationController?.pushViewController(addHiveMemberController, animated: true)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // MARK: - Date Picker Delegate
+    
+    func showDatePicker()
+    {
+        let datePickerView:UIDatePicker = UIDatePicker()
+        
+        datePickerView.datePickerMode = UIDatePickerMode.date
+        
+        self.activeField?.inputView = datePickerView
+        
+        datePickerView.addTarget(self, action: #selector(CreateBeeKeeperViewController.datePickerValueChanged), for: UIControlEvents.valueChanged)
     }
+    
+    func datePickerValueChanged(sender:UIDatePicker) {
+        
+        self.activeField?.text = sender.date.birthdayFormat
+        beeKeeperModel?.dob = sender.date
+    }
+    
+    // MARK: - UIPickerView Delegate
+    
+    func showAdminLevelPicker()
+    {
+        let pickerView = UIPickerView()
+        
+        pickerView.delegate = self
+        self.activeField?.inputView = pickerView
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.activeField?.text = adminLevels[row]
+        beeKeeperModel?.relationship = adminLevels[row]
+    }
+    
+    // MARK: - UIPickerView Data Source
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return adminLevels.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return adminLevels[row]
+    }
+    
     
 }

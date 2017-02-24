@@ -21,6 +21,8 @@
 		8E2616341E51992A008F75F2 /* AddHiveMembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2616331E51992A008F75F2 /* AddHiveMembersViewController.swift */; };
 		8E2616361E519A5C008F75F2 /* AddHiveMemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2616351E519A5C008F75F2 /* AddHiveMemberTableViewCell.swift */; };
 		8E26163A1E519BB1008F75F2 /* HiveMemberAddedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2616391E519BB1008F75F2 /* HiveMemberAddedTableViewCell.swift */; };
+		8E26163C1E5C20AE008F75F2 /* HiveEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E26163B1E5C20AE008F75F2 /* HiveEnums.swift */; };
+		8E26163E1E5C22AC008F75F2 /* HiveUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E26163D1E5C22AC008F75F2 /* HiveUtilities.swift */; };
 		8E2AD9091DC67BD6009CEF5F /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AD9081DC67BD6009CEF5F /* InitialViewController.swift */; };
 		8E2AD90E1DC67DED009CEF5F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AD90D1DC67DED009CEF5F /* AuthService.swift */; };
 		8E37CADC1E3ECC0200203D73 /* CreateHiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E37CADB1E3ECC0200203D73 /* CreateHiveViewController.swift */; };
@@ -73,6 +75,8 @@
 		8E2616331E51992A008F75F2 /* AddHiveMembersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHiveMembersViewController.swift; sourceTree = "<group>"; };
 		8E2616351E519A5C008F75F2 /* AddHiveMemberTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHiveMemberTableViewCell.swift; sourceTree = "<group>"; };
 		8E2616391E519BB1008F75F2 /* HiveMemberAddedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HiveMemberAddedTableViewCell.swift; sourceTree = "<group>"; };
+		8E26163B1E5C20AE008F75F2 /* HiveEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HiveEnums.swift; sourceTree = "<group>"; };
+		8E26163D1E5C22AC008F75F2 /* HiveUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HiveUtilities.swift; sourceTree = "<group>"; };
 		8E2AD9081DC67BD6009CEF5F /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		8E2AD90D1DC67DED009CEF5F /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		8E37CADB1E3ECC0200203D73 /* CreateHiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateHiveViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +169,7 @@
 				8E4D5CD01DB204DD00CC2870 /* ProfileService.swift */,
 				8E2AD90D1DC67DED009CEF5F /* AuthService.swift */,
 				8E65E7221E46B83B00627CE0 /* HiveCreationService.swift */,
+				8E26163D1E5C22AC008F75F2 /* HiveUtilities.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -245,6 +250,7 @@
 			children = (
 				8E65E7261E46B8E100627CE0 /* HiveModel.swift */,
 				8E26162F1E518D2B008F75F2 /* BeeKeeperModel.swift */,
+				8E26163B1E5C20AE008F75F2 /* HiveEnums.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -346,6 +352,7 @@
 				TargetAttributes = {
 					8E3D24A01DB1FAC800B2D8FF = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = VVW2YNDCG9;
 						ProvisioningStyle = Automatic;
 					};
 					8E3D24B41DB1FAC900B2D8FF = {
@@ -489,8 +496,10 @@
 				8E26163A1E519BB1008F75F2 /* HiveMemberAddedTableViewCell.swift in Sources */,
 				8E4D5CD51DB2184300CC2870 /* Colors.swift in Sources */,
 				8E4D5CD71DB225E400CC2870 /* CGButton.swift in Sources */,
+				8E26163C1E5C20AE008F75F2 /* HiveEnums.swift in Sources */,
 				8E37CADC1E3ECC0200203D73 /* CreateHiveViewController.swift in Sources */,
 				8E2616361E519A5C008F75F2 /* AddHiveMemberTableViewCell.swift in Sources */,
+				8E26163E1E5C22AC008F75F2 /* HiveUtilities.swift in Sources */,
 				8E3D24A51DB1FAC900B2D8FF /* AppDelegate.swift in Sources */,
 				8E65E7271E46B8E100627CE0 /* HiveModel.swift in Sources */,
 				8E4D5CD11DB204DD00CC2870 /* ProfileService.swift in Sources */,
@@ -655,7 +664,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = VVW2YNDCG9;
 				INFOPLIST_FILE = changegamer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -675,7 +684,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = VVW2YNDCG9;
 				INFOPLIST_FILE = changegamer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
