@@ -39,7 +39,13 @@ class MainViewController: UIViewController {
     func menuButtonPressed()
     {
         print("menu Button Pressed")
-        NotificationCenter.default.post(name: Notification.Name("kLogoutNotification"), object: nil)
+        let transition: CATransition = CATransition()
+        transition.duration = 0.3
+        transition.type = kCATransitionReveal
+        transition.subtype = kCATransitionFromRight
+        self.view.window!.layer.add(transition, forKey: kCATransition)
+        let navInitialViewController: UINavigationController = UINavigationController(rootViewController: InitialViewController())
+        self.navigationController?.present(navInitialViewController, animated: false, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
