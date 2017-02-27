@@ -19,6 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidFinishLaunching(_ application: UIApplication) {
         Fabric.with([Crashlytics.self])
         
+        let configuration = ParseClientConfiguration {
+            $0.applicationId = "be23504781f842fca0044d88e214151c"
+            $0.clientKey = ""
+            $0.server = "https://changegamer.herokuapp.com/parse"
+        }
+        Parse.initialize(with: configuration)
+        
         UINavigationBar.appearance().tintColor = UIColor.init(.HiveBlack)
         UINavigationBar.appearance().backIndicatorImage = UIImage(named: "back-image");
         UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(named: "back-image")

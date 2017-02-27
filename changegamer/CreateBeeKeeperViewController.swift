@@ -248,7 +248,7 @@ class CreateBeeKeeperViewController: UIViewController, UITableViewDataSource, UI
             self.showAdminLevelPicker()
             break
         case 4:
-            beeKeeperModel?.email = textField.text
+            beeKeeperModel?.email = textField.text?.lowercased()
             break
         case 5:
             beeKeeperModel?.password = textField.text
@@ -278,7 +278,7 @@ class CreateBeeKeeperViewController: UIViewController, UITableViewDataSource, UI
             //beeKeeperModel?.relationship = textField.text
             break
         case 4:
-            beeKeeperModel?.email = textField.text
+            beeKeeperModel?.email = textField.text?.lowercased()
             break
         case 5:
             beeKeeperModel?.password = textField.text
@@ -345,10 +345,21 @@ class CreateBeeKeeperViewController: UIViewController, UITableViewDataSource, UI
     func nextButtonPressed()
     {
         HiveCreationService.sharedInstance.hiveModel?.beeKeepers?.append(beeKeeperModel!)
+        HiveCreationService.sharedInstance.hiveCreator = beeKeeperModel
         
         let addHiveMemberController = AddHiveMembersViewController()
         
         self.navigationController?.pushViewController(addHiveMemberController, animated: true)
+        
+        switch beeKeeperType! {
+        case .head:
+            HiveCreationService.sharedInstance.createUserAndHive()
+        case .normal: break
+            /*InviteService.inviteBeeKeeper(beeKeeper: beeKeeperModel!, hiveID: "dfsdkfd")
+            (success, error){
+                
+            }*/
+        }
     }
     
     // MARK: - Date Picker Delegate

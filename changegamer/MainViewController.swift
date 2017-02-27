@@ -9,6 +9,7 @@
 import UIKit
 import SnapKit
 import pop
+import Parse
 
 class MainViewController: UIViewController {
 
@@ -39,6 +40,7 @@ class MainViewController: UIViewController {
     func menuButtonPressed()
     {
         print("menu Button Pressed")
+        PFUser.logOut()
         let transition: CATransition = CATransition()
         transition.duration = 0.3
         transition.type = kCATransitionReveal

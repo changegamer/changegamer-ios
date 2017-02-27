@@ -113,6 +113,13 @@ class LoginViewController: UIViewController {
     func signInPressed()
     {
         print("Sign In Pressed");
+        
+        /*let spinner: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0, 0, 150, 150)) as UIActivityIndicatorView
+        spinner.startAnimating()*/
+        
+        
+        
+        
         let navMainViewController: UINavigationController = UINavigationController(rootViewController: MainViewController())
         self.navigationController?.present(navMainViewController, animated: true, completion: nil)
     }

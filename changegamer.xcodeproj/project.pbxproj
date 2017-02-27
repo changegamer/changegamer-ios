@@ -36,6 +36,8 @@
 		8E4D5CD11DB204DD00CC2870 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4D5CD01DB204DD00CC2870 /* ProfileService.swift */; };
 		8E4D5CD51DB2184300CC2870 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4D5CD41DB2184300CC2870 /* Colors.swift */; };
 		8E4D5CD71DB225E400CC2870 /* CGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4D5CD61DB225E400CC2870 /* CGButton.swift */; };
+		8E5E99BE1E63BE26005FEB6F /* InviteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5E99BD1E63BE26005FEB6F /* InviteService.swift */; };
+		8E5E99C01E642387005FEB6F /* InviteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5E99BF1E642387005FEB6F /* InviteModel.swift */; };
 		8E65E7231E46B83B00627CE0 /* HiveCreationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65E7221E46B83B00627CE0 /* HiveCreationService.swift */; };
 		8E65E7271E46B8E100627CE0 /* HiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65E7261E46B8E100627CE0 /* HiveModel.swift */; };
 		8E65E7291E46C73D00627CE0 /* CreateBeeKeeperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65E7281E46C73D00627CE0 /* CreateBeeKeeperViewController.swift */; };
@@ -98,6 +100,8 @@
 		8E4D5CD01DB204DD00CC2870 /* ProfileService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
 		8E4D5CD41DB2184300CC2870 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		8E4D5CD61DB225E400CC2870 /* CGButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGButton.swift; sourceTree = "<group>"; };
+		8E5E99BD1E63BE26005FEB6F /* InviteService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteService.swift; sourceTree = "<group>"; };
+		8E5E99BF1E642387005FEB6F /* InviteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteModel.swift; sourceTree = "<group>"; };
 		8E65E7221E46B83B00627CE0 /* HiveCreationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HiveCreationService.swift; sourceTree = "<group>"; };
 		8E65E7261E46B8E100627CE0 /* HiveModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HiveModel.swift; sourceTree = "<group>"; };
 		8E65E7281E46C73D00627CE0 /* CreateBeeKeeperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateBeeKeeperViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +178,7 @@
 				8E2AD90D1DC67DED009CEF5F /* AuthService.swift */,
 				8E65E7221E46B83B00627CE0 /* HiveCreationService.swift */,
 				8E26163D1E5C22AC008F75F2 /* HiveUtilities.swift */,
+				8E5E99BD1E63BE26005FEB6F /* InviteService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -257,6 +262,7 @@
 				8E26162F1E518D2B008F75F2 /* BeeKeeperModel.swift */,
 				8E7570A01E6025910054EBC6 /* HoneyBeeModel.swift */,
 				8E26163B1E5C20AE008F75F2 /* HiveEnums.swift */,
+				8E5E99BF1E642387005FEB6F /* InviteModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -505,6 +511,7 @@
 				8E26163C1E5C20AE008F75F2 /* HiveEnums.swift in Sources */,
 				8E37CADC1E3ECC0200203D73 /* CreateHiveViewController.swift in Sources */,
 				8E2616361E519A5C008F75F2 /* AddHiveMemberTableViewCell.swift in Sources */,
+				8E5E99C01E642387005FEB6F /* InviteModel.swift in Sources */,
 				8E26163E1E5C22AC008F75F2 /* HiveUtilities.swift in Sources */,
 				8E3D24A51DB1FAC900B2D8FF /* AppDelegate.swift in Sources */,
 				8E7570A11E6025910054EBC6 /* HoneyBeeModel.swift in Sources */,
@@ -517,6 +524,7 @@
 				8E2AD90E1DC67DED009CEF5F /* AuthService.swift in Sources */,
 				8E2616341E51992A008F75F2 /* AddHiveMembersViewController.swift in Sources */,
 				8E65E7231E46B83B00627CE0 /* HiveCreationService.swift in Sources */,
+				8E5E99BE1E63BE26005FEB6F /* InviteService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
