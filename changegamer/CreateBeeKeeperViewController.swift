@@ -344,17 +344,29 @@ class CreateBeeKeeperViewController: UIViewController, UITableViewDataSource, UI
     
     func nextButtonPressed()
     {
-        HiveCreationService.sharedInstance.hiveModel?.beeKeepers?.append(beeKeeperModel!)
-        HiveCreationService.sharedInstance.hiveCreator = beeKeeperModel
-        
+       
         let addHiveMemberController = AddHiveMembersViewController()
-        
-        self.navigationController?.pushViewController(addHiveMemberController, animated: true)
         
         switch beeKeeperType! {
         case .head:
+            HiveCreationService.sharedInstance.hiveModel?.beeKeepers?.append(beeKeeperModel!)
+            HiveCreationService.sharedInstance.hiveCreator = self.beeKeeperModel
             HiveCreationService.sharedInstance.createUserAndHive()
-        case .normal: break
+            self.navigationController?.pushViewController(addHiveMemberController, animated: true)
+            break
+        case .normal:
+            
+            HiveCreationService.sharedInstance.createBeeKeeper(beeKeeper: beeKeeperModel!, hiveID: (HiveCreationService.sharedInstance.hiveModel?.objectID)!, completion: { (userObject, success, failure) in
+                if success == true{
+                self.beeKeeperModel?.objectID = userObject.objectId
+                HiveCreationService.sharedInstance.hiveModel?.beeKeepers?.append(self.beeKeeperModel!)
+                addHiveMemberController.recentlyInvitedBeeKeeper = self.beeKeeperModel
+                self.navigationController?.pushViewController(addHiveMemberController, animated: true)
+
+                }
+
+            })
+            break
             /*InviteService.inviteBeeKeeper(beeKeeper: beeKeeperModel!, hiveID: "dfsdkfd")
             (success, error){
                 

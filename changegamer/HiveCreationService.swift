@@ -41,10 +41,70 @@ class HiveCreationService {
                     }
                 } else {
                     NSLog("Hive Created");
+                    self.hiveModel?.objectID = hive.objectId
+                    let userObject = PFObject(className: "UserObject")
+                    userObject.setValue(self.hiveCreator?.firstName, forKey: "firstName")
+                    userObject.setValue(self.hiveCreator?.lastName, forKey: "lastName")
+                    userObject.setValue(self.hiveCreator?.dob, forKey: "birthDate")
+                    userObject.setValue(self.hiveCreator?.relationship, forKey: "relationship")
+                    userObject.setValue(hive.objectId, forKey: "hiveID")
+                    userObject.setValue(self.hiveCreator?.email, forKey: "email")
+                    userObject.setValue(self.hiveCreator?.type?.rawValue, forKey: "beeKeeperType")
+                    userObject.setValue("beekeeper", forKey: "userType")
+                    userObject.saveInBackground()
                 }
             })
         }
         }
     }
     
+    func createBeeKeeper(beeKeeper:BeeKeeperModel, hiveID:String, completion: @escaping (_ userObject: PFObject ,_ success: Bool, _ failure: NSError) -> Void){
+    
+        let userObject = PFObject(className: "UserObject")
+        userObject.setValue(beeKeeper.firstName!, forKey: "firstName")
+        userObject.setValue(beeKeeper.lastName!, forKey: "lastName")
+        userObject.setValue(beeKeeper.dob!, forKey: "birthDate")
+        userObject.setValue(beeKeeper.relationship!, forKey: "relationship")
+        userObject.setValue(hiveID, forKey: "hiveID")
+        userObject.setValue(beeKeeper.type?.rawValue, forKey: "beeKeeperType")
+        userObject.setValue(beeKeeper.email!, forKey: "email")
+        userObject.setValue("beekeeper", forKey: "userType")
+        
+        userObject.saveInBackground(block: { (success, error) -> Void in
+            if let error = error {
+                if let errorString = (error as NSError).userInfo["error"] as? String {
+                    NSLog(errorString);
+                    completion(userObject,false,error as NSError)
+                }
+            } else {
+                NSLog("Hive Created");
+                completion(userObject,true, NSError())
+            }
+        })
+    }
+    
+    func createHoneyBee(honeyBee:HoneyBeeModel, hiveID:String, completion: @escaping (_ userObject: PFObject ,_ success: Bool, _ failure: NSError) -> Void){
+        
+        let userObject = PFObject(className: "UserObject")
+        userObject.setValue(honeyBee.firstName, forKey: "firstName")
+        userObject.setValue(honeyBee.lastName, forKey: "lastName")
+        userObject.setValue(honeyBee.dob, forKey: "birthDate")
+        userObject.setValue(honeyBee.relationship, forKey: "relationship")
+        userObject.setValue(hiveID, forKey: "hiveID")
+        userObject.setValue("honeybee", forKey: "userType")
+        
+        userObject.saveInBackground(block: { (success, error) -> Void in
+            if let error = error {
+                if let errorString = (error as NSError).userInfo["error"] as? String {
+                    NSLog(errorString);
+                    completion(userObject,false,error as NSError)
+                }
+            } else {
+                NSLog("Hive Created");
+                completion(userObject,true, error as! NSError)
+            }
+        })
+        
+        
+    }
 }

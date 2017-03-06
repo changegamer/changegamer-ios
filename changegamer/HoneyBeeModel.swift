@@ -10,6 +10,7 @@ import Foundation
 
 class HoneyBeeModel: NSObject {
     
+    var objectID : String?
     var firstName: String?
     var lastName: String?
     var dob : Date?

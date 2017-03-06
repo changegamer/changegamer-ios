@@ -236,11 +236,16 @@ class CreateHoneyBeeViewController: UIViewController, UITableViewDataSource, UIT
     
     func nextButtonPressed()
     {
-        HiveCreationService.sharedInstance.hiveModel?.honeyBees?.append(honeyBeeModel!)
         
         let addHiveMemberController = AddHiveMembersViewController()
         
-        self.navigationController?.pushViewController(addHiveMemberController, animated: true)
+        HiveCreationService.sharedInstance.createHoneyBee(honeyBee: self.honeyBeeModel!, hiveID: (HiveCreationService.sharedInstance.hiveModel?.objectID)!, completion: { (userObject, success, failure) in
+            
+            self.honeyBeeModel?.objectID = userObject.objectId
+            HiveCreationService.sharedInstance.hiveModel?.honeyBees?.append(self.honeyBeeModel!)
+            addHiveMemberController.recentlyInvitedHoneyBee = self.honeyBeeModel
+            self.navigationController?.pushViewController(addHiveMemberController, animated: true)
+        })
     }
     
     func validateFields()

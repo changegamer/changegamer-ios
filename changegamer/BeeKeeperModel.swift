@@ -10,6 +10,7 @@ import Foundation
 
 class BeeKeeperModel: NSObject {
 
+    var objectID: String?
     var firstName: String?
     var lastName: String?
     var dob : Date?

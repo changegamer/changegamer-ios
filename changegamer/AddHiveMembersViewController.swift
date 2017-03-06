@@ -14,6 +14,8 @@ class AddHiveMembersViewController: UIViewController, UITableViewDataSource, UIT
     
     var window: UIWindow?
     var tableView : UITableView?
+    var recentlyInvitedBeeKeeper : BeeKeeperModel?
+    var recentlyInvitedHoneyBee : HoneyBeeModel?
     
     override func viewDidLoad() {
         
@@ -55,6 +57,31 @@ class AddHiveMembersViewController: UIViewController, UITableViewDataSource, UIT
         }
         
         print(HiveCreationService.sharedInstance.hiveModel?.hiveName ?? "no hive name")
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if self.recentlyInvitedHoneyBee != nil{
+            InviteService.inviteHoneyBee(honeyBee: self.recentlyInvitedHoneyBee!, hiveID: (HiveCreationService.sharedInstance.hiveModel?.objectID!)!, completion: { (success, error) -> Void in
+                
+                if success == true{
+                    
+                }
+                
+            })
+        }
+        
+        if self.recentlyInvitedBeeKeeper != nil{
+            InviteService.inviteBeeKeeper(beeKeeper: self.recentlyInvitedBeeKeeper!, hiveID: (HiveCreationService.sharedInstance.hiveModel?.objectID!)!, completion: { (success, error) -> Void in
+                
+                if success == true{
+                    
+                }
+                
+            })
+        }
+        
         
     }
     

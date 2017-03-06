@@ -9,12 +9,13 @@
 import UIKit
 import SnapKit
 import pop
+import Parse
 
 class LoginViewController: UIViewController {
     
     var window: UIWindow?
     var userTextField: UITextField?
-    
+    var passwordTextField: UITextField?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,16 +59,16 @@ class LoginViewController: UIViewController {
             make.centerX.equalTo(self.view.center.x)
         }
         
-        let passwordTextField = UITextField()
-        passwordTextField.attributedPlaceholder = NSAttributedString.init(string: "Password", attributes: multipleAttributes)
-        passwordTextField.textColor = UIColor.init(.HiveGray)
-        passwordTextField.font = graphikLightWithSize(size: 18.0)
-        passwordTextField.autocorrectionType = UITextAutocorrectionType.no
-        passwordTextField.isSecureTextEntry = true
-        passwordTextField.clipsToBounds = true
-        view.addSubview(passwordTextField)
+        passwordTextField = UITextField()
+        passwordTextField?.attributedPlaceholder = NSAttributedString.init(string: "Password", attributes: multipleAttributes)
+        passwordTextField?.textColor = UIColor.init(.HiveGray)
+        passwordTextField?.font = graphikLightWithSize(size: 18.0)
+        passwordTextField?.autocorrectionType = UITextAutocorrectionType.no
+        passwordTextField?.isSecureTextEntry = true
+        passwordTextField?.clipsToBounds = true
+        view.addSubview(passwordTextField!)
         
-        passwordTextField.snp.makeConstraints { (make) -> Void in
+        passwordTextField?.snp.makeConstraints { (make) -> Void in
             make.top.equalTo(300)
             make.height.equalTo(44)
             make.leadingMargin.equalTo(15)
@@ -83,7 +84,7 @@ class LoginViewController: UIViewController {
         let passwordLowerBorder = CALayer()
         passwordLowerBorder.backgroundColor = UIColor.init(.HiveBorder).cgColor
         passwordLowerBorder.frame = CGRect(x: 0, y: 43, width: self.view.frame.size.width-30, height: 1.0)
-        passwordTextField.layer.addSublayer(passwordLowerBorder)
+        passwordTextField?.layer.addSublayer(passwordLowerBorder)
         
         let signInButton = UIButton(type: UIButtonType.custom)
         signInButton.setTitle("Sign In", for: UIControlState.normal)
@@ -117,11 +118,25 @@ class LoginViewController: UIViewController {
         /*let spinner: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0, 0, 150, 150)) as UIActivityIndicatorView
         spinner.startAnimating()*/
         
-        
-        
-        
-        let navMainViewController: UINavigationController = UINavigationController(rootViewController: MainViewController())
-        self.navigationController?.present(navMainViewController, animated: true, completion: nil)
+        PFUser.logInWithUsername(inBackground: (userTextField?.text?.lowercased())!, password: (passwordTextField?.text)!) { (user, error) -> Void in
+          
+            if error == nil {
+                let navMainViewController: UINavigationController = UINavigationController(rootViewController: MainViewController())
+                self.navigationController?.present(navMainViewController, animated: true, completion: nil)
+
+            } else {
+                print("error: \(error)")
+                let alertController = UIAlertController(title: "Error Signing In!", message: "Please Try Again", preferredStyle: UIAlertControllerStyle.alert)
+                
+                // Replace UIAlertActionStyle.Default by UIAlertActionStyle.default
+                let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
+                    (result : UIAlertAction) -> Void in
+                    print("OK")
+                }
+                alertController.addAction(okAction)
+                self.present(alertController, animated: true, completion: nil)
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {
