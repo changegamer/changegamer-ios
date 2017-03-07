@@ -29,7 +29,7 @@ class HoneyBeeModel: NSObject {
     
     func updateWithObject(object: PFObject)
     {
-        self.objectID = object.value(forKey: "objectID") as! String?
+        self.objectID = object.objectId
         self.relationship = object.value(forKey: "relationship") as! String?
         self.firstName = object.value(forKey: "firstName") as! String?
         self.lastName = object.value(forKey: "lastName") as! String?

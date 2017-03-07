@@ -102,7 +102,7 @@ class HiveCreationService {
                 }
             } else {
                 NSLog("Hive Created");
-                completion(userObject,true, error as! NSError)
+                completion(userObject,true, NSError())
             }
         })
     }
