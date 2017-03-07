@@ -132,6 +132,10 @@ class InitialViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
+    
     func createNewHivePressed()
     {
         print("Create New Hive Pressed");

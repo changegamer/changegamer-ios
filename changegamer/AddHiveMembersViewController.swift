@@ -63,9 +63,27 @@ class AddHiveMembersViewController: UIViewController, UITableViewDataSource, UIT
     override func viewDidAppear(_ animated: Bool) {
         
         if self.recentlyInvitedHoneyBee != nil{
-            InviteService.inviteHoneyBee(honeyBee: self.recentlyInvitedHoneyBee!, hiveID: (HiveCreationService.sharedInstance.hiveModel?.objectID!)!, completion: { (success, error) -> Void in
+            InviteService.inviteHoneyBee(honeyBee: self.recentlyInvitedHoneyBee!, hiveID: (HiveCreationService.sharedInstance.hiveModel?.objectID!)!, completion: { (firstName, inviteCode,success, error) -> Void in
                 
                 if success == true{
+                    self.recentlyInvitedHoneyBee = nil
+                    self.recentlyInvitedBeeKeeper = nil
+
+                    let inviteCodeView = InviteCodeView.init()
+                    inviteCodeView.headerLabel.text = "Hive Invite Sent!"
+                    inviteCodeView.userNameLabel.text = firstName
+                    inviteCodeView.subtitleLabel.text = "Enter code on device"
+                    inviteCodeView.inviteCodeLabel.text = inviteCode
+                    inviteCodeView.expirationLabel.text = "Expires in 48hrs"
+                    inviteCodeView.translatesAutoresizingMaskIntoConstraints = false
+                    
+                    self.view.addSubview(inviteCodeView)
+                    
+                    NSLayoutConstraint.activate([inviteCodeView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+                                                 inviteCodeView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 70.0),
+                                                 inviteCodeView.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 20),
+                                                 inviteCodeView.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -20),
+                                                 inviteCodeView.heightAnchor.constraint(equalToConstant: 462)])
                     
                 }
                 
@@ -73,9 +91,28 @@ class AddHiveMembersViewController: UIViewController, UITableViewDataSource, UIT
         }
         
         if self.recentlyInvitedBeeKeeper != nil{
-            InviteService.inviteBeeKeeper(beeKeeper: self.recentlyInvitedBeeKeeper!, hiveID: (HiveCreationService.sharedInstance.hiveModel?.objectID!)!, completion: { (success, error) -> Void in
+            InviteService.inviteBeeKeeper(beeKeeper: self.recentlyInvitedBeeKeeper!, hiveID: (HiveCreationService.sharedInstance.hiveModel?.objectID!)!, completion: { (firstName, email, inviteCode,success, error) -> Void in
                 
                 if success == true{
+                    self.recentlyInvitedBeeKeeper = nil
+                    self.recentlyInvitedHoneyBee = nil
+                    
+                    
+
+                    let inviteCodeView = InviteCodeView.init(frame: CGRect(x: 20, y: 70, width: self.view.frame.size.width-40, height: 462))
+                    inviteCodeView.headerLabel.text = "Hive Invite Sent!"
+                    inviteCodeView.userNameLabel.text = firstName
+                    inviteCodeView.subtitleLabel.text = email
+                    inviteCodeView.inviteCodeLabel.text = inviteCode
+                    inviteCodeView.expirationLabel.text = "Expires in 48hrs"
+                    
+                    self.view.addSubview(inviteCodeView)
+                    
+                    NSLayoutConstraint.activate([inviteCodeView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+                                                 inviteCodeView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 70.0),
+                                                 inviteCodeView.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 20),
+                                                 inviteCodeView.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -20),
+                                                 inviteCodeView.heightAnchor.constraint(equalToConstant: 462)])
                     
                 }
                 

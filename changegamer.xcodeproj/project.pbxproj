@@ -38,6 +38,8 @@
 		8E4D5CD71DB225E400CC2870 /* CGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4D5CD61DB225E400CC2870 /* CGButton.swift */; };
 		8E5E99BE1E63BE26005FEB6F /* InviteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5E99BD1E63BE26005FEB6F /* InviteService.swift */; };
 		8E5E99C01E642387005FEB6F /* InviteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5E99BF1E642387005FEB6F /* InviteModel.swift */; };
+		8E5E99C21E6CF9EC005FEB6F /* InviteCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5E99C11E6CF9EC005FEB6F /* InviteCodeView.swift */; };
+		8E5E99C61E6EB57E005FEB6F /* JoinHiveFinishSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5E99C51E6EB57E005FEB6F /* JoinHiveFinishSignupViewController.swift */; };
 		8E65E7231E46B83B00627CE0 /* HiveCreationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65E7221E46B83B00627CE0 /* HiveCreationService.swift */; };
 		8E65E7271E46B8E100627CE0 /* HiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65E7261E46B8E100627CE0 /* HiveModel.swift */; };
 		8E65E7291E46C73D00627CE0 /* CreateBeeKeeperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65E7281E46C73D00627CE0 /* CreateBeeKeeperViewController.swift */; };
@@ -102,6 +104,8 @@
 		8E4D5CD61DB225E400CC2870 /* CGButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGButton.swift; sourceTree = "<group>"; };
 		8E5E99BD1E63BE26005FEB6F /* InviteService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteService.swift; sourceTree = "<group>"; };
 		8E5E99BF1E642387005FEB6F /* InviteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteModel.swift; sourceTree = "<group>"; };
+		8E5E99C11E6CF9EC005FEB6F /* InviteCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteCodeView.swift; sourceTree = "<group>"; };
+		8E5E99C51E6EB57E005FEB6F /* JoinHiveFinishSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinHiveFinishSignupViewController.swift; sourceTree = "<group>"; };
 		8E65E7221E46B83B00627CE0 /* HiveCreationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HiveCreationService.swift; sourceTree = "<group>"; };
 		8E65E7261E46B8E100627CE0 /* HiveModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HiveModel.swift; sourceTree = "<group>"; };
 		8E65E7281E46C73D00627CE0 /* CreateBeeKeeperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateBeeKeeperViewController.swift; sourceTree = "<group>"; };
@@ -251,6 +255,7 @@
 				8E65E7281E46C73D00627CE0 /* CreateBeeKeeperViewController.swift */,
 				8E2616331E51992A008F75F2 /* AddHiveMembersViewController.swift */,
 				8E75709E1E6025250054EBC6 /* CreateHoneyBeeViewController.swift */,
+				8E5E99C51E6EB57E005FEB6F /* JoinHiveFinishSignupViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -270,6 +275,7 @@
 		8E65E72A1E46C8F100627CE0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8E5E99C11E6CF9EC005FEB6F /* InviteCodeView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -516,12 +522,14 @@
 				8E3D24A51DB1FAC900B2D8FF /* AppDelegate.swift in Sources */,
 				8E7570A11E6025910054EBC6 /* HoneyBeeModel.swift in Sources */,
 				8E65E7271E46B8E100627CE0 /* HiveModel.swift in Sources */,
+				8E5E99C61E6EB57E005FEB6F /* JoinHiveFinishSignupViewController.swift in Sources */,
 				8E75709F1E6025250054EBC6 /* CreateHoneyBeeViewController.swift in Sources */,
 				8E4D5CD11DB204DD00CC2870 /* ProfileService.swift in Sources */,
 				8E65E7291E46C73D00627CE0 /* CreateBeeKeeperViewController.swift in Sources */,
 				8E2616301E518D2B008F75F2 /* BeeKeeperModel.swift in Sources */,
 				8E18DD5F1E3DB09700FCDB1F /* LoginViewController.swift in Sources */,
 				8E2AD90E1DC67DED009CEF5F /* AuthService.swift in Sources */,
+				8E5E99C21E6CF9EC005FEB6F /* InviteCodeView.swift in Sources */,
 				8E2616341E51992A008F75F2 /* AddHiveMembersViewController.swift in Sources */,
 				8E65E7231E46B83B00627CE0 /* HiveCreationService.swift in Sources */,
 				8E5E99BE1E63BE26005FEB6F /* InviteService.swift in Sources */,

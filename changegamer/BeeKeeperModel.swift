@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Parse
 
 class BeeKeeperModel: NSObject {
 
@@ -19,6 +20,25 @@ class BeeKeeperModel: NSObject {
     var password: String?
     var confirm: String?
     var type: BeeKeeperType?
+    var hiveID: String?
+    
+    override init()
+    {
+        super.init()
+    }
+    
+    func updateWithObject(object: PFObject)
+    {
+        self.objectID = object.objectId
+        self.relationship = object.value(forKey: "relationship") as! String?
+        self.firstName = object.value(forKey: "firstName") as! String?
+        self.lastName = object.value(forKey: "lastName") as! String?
+        self.dob = object.value(forKey: "birthDate") as! Date?
+        self.hiveID = object.value(forKey: "hiveID") as! String?
+        self.type = BeeKeeperType(rawValue: object.value(forKey: "beeKeeperType") as! String)
+        self.email = object.value(forKey: "email") as! String?
+        
+    }
     
     func allFieldsEntered() -> Bool
     {
